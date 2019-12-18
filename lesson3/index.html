@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css"/>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+        }
+
+        .none {
+            -webkit-filter: none;
+        }
+
+        .blur {
+            -webkit-filter: blur(3px);
+        }
+
+        .grayscale {
+            -webkit-filter: grayscale(1);
+        }
+
+        .invert {
+            -webkit-filter: invert(1);
+        }
+
+        .sepia {
+            -webkit-filter: sepia(1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>webRTC snap photo</h1>
+    <div class="picContent">
+        <video id="videoPlay" autoplay playsinline></video>
+        <canvas id="picture"/>
+    </div>
+    <button>snap</button>
+    <button>download</button>
+    <select id="filter">
+        <option value="none">None</option>
+        <option value="blur">blur</option>
+        <option value="grayscale">Grayscale</option>
+        <option value="invert">Invert</option>
+        <option value="sepia">sepia</option>
+    </select>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
